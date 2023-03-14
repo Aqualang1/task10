@@ -3,6 +3,7 @@ $white-color: #FFFFFF;
 $green-color: #1ED400;
 
 * {
+    border: none;
     margin: 0;
     padding: 0;
     font-family: "Lato", sans-serif;
@@ -89,7 +90,6 @@ $green-color: #1ED400;
 
     &__small {
         min-height: 760px;
-
     }
 
 }
@@ -259,6 +259,10 @@ $green-color: #1ED400;
     padding: 5% 0%;
     align-items: center;
 
+    // &--little:first-child,
+    // &--little:last-child {
+    //     max-width: 27%;
+    // } хуйня, не работает. Подумать ещё.
 }
 
 .media-container {
@@ -290,7 +294,6 @@ $green-color: #1ED400;
 
     &--little {
         max-width: 27%;
-
     }
 
 }
