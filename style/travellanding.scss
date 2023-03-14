@@ -254,8 +254,9 @@ $green-color: #1ED400;
         font-weight: 700;
     }
 
-    p {
-        padding: 2% 0%;
+    div {
+        padding: 1% 0%;
+        text-align: center;
     }
 
     &--green {
@@ -291,8 +292,8 @@ $green-color: #1ED400;
 
     span {
         position: absolute;
-        top: 6px;
-        left: 8px;
+        top: 20px;
+        left: 0px;
         background-color: $black-color;
         color: $white-color;
         font-family: "Roboto Slab", serif;

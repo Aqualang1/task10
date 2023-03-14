@@ -219,8 +219,9 @@
   font-size: 56px;
   font-weight: 700;
 }
-.media-wrapper p {
-  padding: 2% 0%;
+.media-wrapper div {
+  padding: 1% 0%;
+  text-align: center;
 }
 .media-wrapper--green {
   background-image: url(../images/fish.png);
@@ -247,8 +248,8 @@
 }
 .media-container span {
   position: absolute;
-  top: 6px;
-  left: 8px;
+  top: 20px;
+  left: 0px;
   background-color: rgba(0, 0, 0, 0.8509803922);
   color: #FFFFFF;
   font-family: "Roboto Slab", serif;
