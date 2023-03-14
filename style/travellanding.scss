@@ -14,7 +14,8 @@ $green-color: #1ED400;
 
 .header {
     background-image: url(../images/bgrndimg.png);
-    min-height: 800px;
+    background-repeat: no-repeat;
+    // min-height: 800px;
 }
 
 .navlist {
@@ -26,6 +27,13 @@ $green-color: #1ED400;
     font-weight: 500;
     font-size: 22px;
     color: #FFFFFF;
+
+    &--footer {
+        background-image: url(../images/Mountains.png);
+        background-repeat: no-repeat;
+        color: $black-color;
+        padding: 4% 3%;
+    }
 }
 
 .block {
@@ -38,6 +46,10 @@ $green-color: #1ED400;
     font-weight: 700;
     font-size: 32px;
     color: #FFFFFF;
+
+    &--footer {
+        color: $black-color;
+    }
 }
 
 .list {
@@ -49,11 +61,13 @@ $green-color: #1ED400;
     &>:not(:last-child) {
         padding-right: 30px;
     }
+
+    .eng {
+        display: flex;
+    }
+
 }
 
-.eng {
-    display: flex;
-}
 
 .social {
     display: flex;
@@ -102,6 +116,40 @@ $green-color: #1ED400;
         font-weight: 400;
         font-size: 24px;
         padding: 20px 0px;
+    }
+
+    &__small {
+        h4 {
+            text-transform: uppercase;
+            font-family: "Roboto Slab", serif;
+            font-size: 56px;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-family: "Roboto Slab", serif;
+            font-size: 144px;
+            font-weight: 700;
+        }
+
+        p {
+            font-family: "Quicksand", sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        span {
+            font-family: "Quicksand", sans-serif;
+            font-size: 32px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 30px 0px;
+            border-top: 3px solid $white-color;
+        }
+    }
+
+    &__black {
+        color: $black-color;
     }
 
 }
@@ -172,5 +220,77 @@ $green-color: #1ED400;
 
 .barcelona {
     background-image: url(../images/barcelona.png);
-    color: $white-color;
+    background-repeat: no-repeat;
+}
+
+// .media {
+//     padding: 3%;
+// }
+
+.media-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 0%;
+
+    h4 {
+        text-transform: uppercase;
+        font-family: "Roboto Slab", serif;
+        font-size: 56px;
+        font-weight: 700;
+    }
+
+    p {
+        padding: 2% 0%;
+    }
+
+    &--green {
+        background-image: url(../images/fish.png);
+        color: $white-color;
+        padding-bottom: 0%;
+        background-repeat: no-repeat;
+    }
+
+}
+
+.media-string {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 0%;
+    align-items: center;
+
+}
+
+.media-container {
+    position: relative;
+    max-width: 30%;
+
+
+    span {
+        position: absolute;
+        top: 6px;
+        left: 8px;
+        background-color: $black-color;
+        color: $white-color;
+        font-family: "Roboto Slab", serif;
+        font-size: 18px;
+        font-weight: 400;
+        border: 5px solid $black-color;
+    }
+
+    img {
+        max-width: -webkit-fill-available;
+    }
+
+    p {
+        font-family: "Quicksand", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &--little {
+        max-width: 27%;
+
+    }
+
 }

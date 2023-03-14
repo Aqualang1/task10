@@ -10,7 +10,7 @@
 
 .header {
   background-image: url(../images/bgrndimg.png);
-  min-height: 800px;
+  background-repeat: no-repeat;
 }
 
 .navlist {
@@ -22,6 +22,12 @@
   font-weight: 500;
   font-size: 22px;
   color: #FFFFFF;
+}
+.navlist--footer {
+  background-image: url(../images/Mountains.png);
+  background-repeat: no-repeat;
+  color: rgba(0, 0, 0, 0.8509803922);
+  padding: 4% 3%;
 }
 
 .block {
@@ -35,6 +41,9 @@
   font-size: 32px;
   color: #FFFFFF;
 }
+.logo--footer {
+  color: rgba(0, 0, 0, 0.8509803922);
+}
 
 .list {
   display: flex;
@@ -45,8 +54,7 @@
 .list > :not(:last-child) {
   padding-right: 30px;
 }
-
-.eng {
+.list .eng {
   display: flex;
 }
 
@@ -92,6 +100,33 @@
   font-weight: 400;
   font-size: 24px;
   padding: 20px 0px;
+}
+.banner__small h4 {
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  font-size: 56px;
+  font-weight: 700;
+}
+.banner__small h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 144px;
+  font-weight: 700;
+}
+.banner__small p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+.banner__small span {
+  font-family: "Quicksand", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 30px 0px;
+  border-top: 3px solid #FFFFFF;
+}
+.banner__black {
+  color: rgba(0, 0, 0, 0.8509803922);
 }
 
 .btn {
@@ -153,5 +188,61 @@
 
 .barcelona {
   background-image: url(../images/barcelona.png);
+  background-repeat: no-repeat;
+}
+
+.media-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3% 0%;
+}
+.media-wrapper h4 {
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  font-size: 56px;
+  font-weight: 700;
+}
+.media-wrapper p {
+  padding: 2% 0%;
+}
+.media-wrapper--green {
+  background-image: url(../images/fish.png);
   color: #FFFFFF;
+  padding-bottom: 0%;
+  background-repeat: no-repeat;
+}
+
+.media-string {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 0%;
+  align-items: center;
+}
+
+.media-container {
+  position: relative;
+  max-width: 30%;
+}
+.media-container span {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  background-color: rgba(0, 0, 0, 0.8509803922);
+  color: #FFFFFF;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 400;
+  border: 5px solid rgba(0, 0, 0, 0.8509803922);
+}
+.media-container img {
+  max-width: -webkit-fill-available;
+}
+.media-container p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.media-container--little {
+  max-width: 27%;
 }/*# sourceMappingURL=travellanding.css.map */
