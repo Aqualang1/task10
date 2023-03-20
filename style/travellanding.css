@@ -19,7 +19,9 @@
   width: 100%;
 }
 
-.navlist {
+.header__navlist {
+  background-color: rgba(0, 0, 0, 0.8509803922);
+  opacity: 0.98;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -29,7 +31,7 @@
   font-size: 22px;
   color: #FFFFFF;
 }
-.navlist--footer {
+.header__navlist--footer {
   background-image: url(../images/Mountains.png);
   background-position: center;
   background-size: cover;
@@ -40,18 +42,13 @@
   padding: 4% 0%;
 }
 
-.block {
-  background-color: rgba(0, 0, 0, 0.8509803922);
-  opacity: 0.98;
-}
-
-.logo {
+.navlist__logo {
   font-family: "Roboto Slab", serif;
   font-weight: 700;
   font-size: 32px;
   color: #FFFFFF;
 }
-.logo--footer {
+.navlist__logo--footer {
   color: rgba(0, 0, 0, 0.8509803922);
 }
 
@@ -68,24 +65,28 @@
   display: flex;
 }
 
-.social {
+.navlist__social {
   display: flex;
-  justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
-.social > :not(:last-child) {
+.navlist__social > :not(:last-child) {
   padding-right: 30px;
 }
+.navlist__social svg {
+  fill: #FFFFFF;
+}
+.navlist__social--black svg {
+  fill: rgba(0, 0, 0, 0.8509803922);
+}
 
-.banner-wrapper {
+.header__banner-wrapper {
   display: flex;
   min-height: 800px;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.banner-wrapper__small {
+.header__banner-wrapper--small {
   min-height: 760px;
 }
 
@@ -99,35 +100,39 @@
   max-width: 65%;
   padding: 40px;
 }
-.banner h1 {
+.banner--black-ground {
+  background-color: rgba(0, 0, 0, 0.8509803922);
+  opacity: 0.98;
+}
+.banner .banner__heading {
   font-family: "Lora", serif;
   font-weight: 700;
   font-size: 84px;
   text-transform: uppercase;
 }
-.banner p {
+.banner .banner__tagline {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 24px;
   padding: 20px 0px;
 }
-.banner__small h4 {
+.banner--small .banner__notice {
   text-transform: uppercase;
   font-family: "Roboto Slab", serif;
   font-size: 56px;
   font-weight: 700;
 }
-.banner__small h1 {
+.banner--small .banner__heading {
   font-family: "Roboto Slab", serif;
   font-size: 144px;
   font-weight: 700;
 }
-.banner__small p {
+.banner--small .banner__tagline {
   font-family: "Quicksand", sans-serif;
   font-size: 24px;
   font-weight: 400;
 }
-.banner__small span {
+.banner--small .discount {
   font-family: "Quicksand", sans-serif;
   font-size: 32px;
   font-weight: 500;
@@ -148,7 +153,7 @@
   font-size: 16px;
   cursor: pointer;
 }
-.btn__banner {
+.btn--banner {
   padding: 20px 100px;
 }
 .btn__small {
@@ -161,26 +166,26 @@
   text-align: center;
   padding: 4%;
 }
-.article h1 {
+.article .article__heading {
   font-family: "Roboto Slab", serif;
   font-weight: 700;
   font-size: 56px;
   text-transform: uppercase;
 }
-.article p {
+.article .article__text {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-size: 20px;
   padding: 35px 230px;
 }
 
-.promo {
+.article__promo {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding-top: 100px;
   grid-gap: 2%;
 }
-.promo li {
+.article__promo .promo__item {
   display: grid;
   grid-template-rows: 30px 120px 155px;
   color: #1ED400;
@@ -190,7 +195,7 @@
   justify-items: center;
   align-items: center;
 }
-.promo li span {
+.article__promo .promo__item .article__tagline {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   font-size: 40px;
@@ -207,23 +212,23 @@
   width: 100%;
 }
 
-.media-wrapper {
+.media-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3% 0%;
 }
-.media-wrapper h4 {
+.media-container__heading {
   text-transform: uppercase;
   font-family: "Roboto Slab", serif;
   font-size: 56px;
   font-weight: 700;
 }
-.media-wrapper div {
+.media-container .media__social {
   padding: 1% 0%;
   text-align: center;
 }
-.media-wrapper--green {
+.media-container--green {
   background-image: url(../images/fish.png);
   color: #FFFFFF;
   background-position: center;
@@ -242,11 +247,11 @@
   align-items: center;
 }
 
-.media-container {
+.media {
   position: relative;
   max-width: 30%;
 }
-.media-container span {
+.media__tagline {
   position: absolute;
   top: 20px;
   left: 0px;
@@ -257,20 +262,20 @@
   font-weight: 400;
   border: 5px solid rgba(0, 0, 0, 0.8509803922);
 }
-.media-container .play-btn {
+.media .play-btn {
   position: absolute;
   top: 40%;
   left: 45%;
   cursor: pointer;
 }
-.media-container img {
+.media__picture {
   max-width: -webkit-fill-available;
 }
-.media-container p {
+.media__social {
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
   font-weight: 500;
 }
-.media-container--little {
+.media--little {
   max-width: 27%;
 }/*# sourceMappingURL=travellanding.css.map */

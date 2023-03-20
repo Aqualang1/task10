@@ -2,6 +2,12 @@ $black-color: rgba(0, 0, 0, 0.8509803922);
 $white-color: #FFFFFF;
 $green-color: #1ED400;
 
+@mixin opacityColor($color, $opacity) {
+    background-color: $color;
+    opacity: $opacity;
+}
+
+
 * {
     border: none;
     margin: 0;
@@ -24,7 +30,8 @@ $green-color: #1ED400;
     // min-height: 800px;
 }
 
-.navlist {
+.header__navlist {
+    @include opacityColor($black-color, 0.98);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -43,14 +50,17 @@ $green-color: #1ED400;
         color: $black-color;
         padding: 4% 0%;
     }
+
+
 }
 
-.block {
-    background-color: $black-color;
-    opacity: 0.98;
-}
 
-.logo {
+// .black {
+//     background-color: $black-color;
+//     opacity: 0.98;
+// }
+
+.navlist__logo {
     font-family: "Roboto Slab", serif;
     font-weight: 700;
     font-size: 32px;
@@ -77,26 +87,33 @@ $green-color: #1ED400;
 
 }
 
-
-.social {
+.navlist__social {
     display: flex;
-    justify-content: center;
     align-items: center;
-    cursor: pointer;
 
     &>:not(:last-child) {
         padding-right: 30px;
     }
+
+    svg {
+        fill: $white-color;
+    }
+
+    &--black {
+        svg {
+            fill: $black-color;
+        }
+    }
 }
 
-.banner-wrapper {
+.header__banner-wrapper {
     display: flex;
     min-height: 800px;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
 
-    &__small {
+    &--small {
         min-height: 760px;
     }
 
@@ -112,41 +129,46 @@ $green-color: #1ED400;
     max-width: 65%;
     padding: 40px;
 
-    h1 {
+    &--black-ground {
+        @include opacityColor($black-color, 0.98);
+
+    }
+
+    .banner__heading {
         font-family: "Lora", serif;
         font-weight: 700;
         font-size: 84px;
         text-transform: uppercase;
     }
 
-    p {
+    .banner__tagline {
         font-family: "Lato", sans-serif;
         font-weight: 400;
         font-size: 24px;
         padding: 20px 0px;
     }
 
-    &__small {
-        h4 {
+    &--small {
+        .banner__notice {
             text-transform: uppercase;
             font-family: "Roboto Slab", serif;
             font-size: 56px;
             font-weight: 700;
         }
 
-        h1 {
+        .banner__heading {
             font-family: "Roboto Slab", serif;
             font-size: 144px;
             font-weight: 700;
         }
 
-        p {
+        .banner__tagline {
             font-family: "Quicksand", sans-serif;
             font-size: 24px;
             font-weight: 400;
         }
 
-        span {
+        .discount {
             font-family: "Quicksand", sans-serif;
             font-size: 32px;
             font-weight: 500;
@@ -171,7 +193,7 @@ $green-color: #1ED400;
     font-size: 16px;
     cursor: pointer;
 
-    &__banner {
+    &--banner {
         padding: 20px 100px;
     }
 
@@ -186,7 +208,7 @@ $green-color: #1ED400;
     text-align: center;
     padding: 4%;
 
-    h1 {
+    .article__heading {
         font-family: "Roboto Slab", serif;
         font-weight: 700;
         font-size: 56px;
@@ -194,7 +216,7 @@ $green-color: #1ED400;
 
     }
 
-    p {
+    .article__text {
         font-family: "Quicksand", sans-serif;
         font-weight: 500;
         font-size: 20px;
@@ -202,13 +224,13 @@ $green-color: #1ED400;
     }
 }
 
-.promo {
+.article__promo {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding-top: 100px;
     grid-gap: 2%;
 
-    li {
+    .promo__item {
         display: grid;
         grid-template-rows: 30px 120px 155px;
         color: $green-color;
@@ -218,7 +240,7 @@ $green-color: #1ED400;
         justify-items: center;
         align-items: center;
 
-        span {
+        .article__tagline {
             font-family: "Quicksand", sans-serif;
             font-weight: 400;
             font-size: 40px;
@@ -237,24 +259,20 @@ $green-color: #1ED400;
 
 }
 
-// .media {
-//     padding: 3%;
-// }
-
-.media-wrapper {
+.media-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 3% 0%;
 
-    h4 {
+    &__heading {
         text-transform: uppercase;
         font-family: "Roboto Slab", serif;
         font-size: 56px;
         font-weight: 700;
     }
 
-    div {
+    .media__social {
         padding: 1% 0%;
         text-align: center;
     }
@@ -266,7 +284,6 @@ $green-color: #1ED400;
         background-size: cover;
         height: fit-content;
         width: 100%;
-
         padding-bottom: 0%;
         background-repeat: no-repeat;
     }
@@ -278,19 +295,14 @@ $green-color: #1ED400;
     justify-content: space-between;
     padding: 5% 0%;
     align-items: center;
-
-    // &--little:first-child,
-    // &--little:last-child {
-    //     max-width: 27%;
-    // } хуйня, не работает. Подумать ещё.
 }
 
-.media-container {
+.media {
     position: relative;
     max-width: 30%;
 
 
-    span {
+    &__tagline {
         position: absolute;
         top: 20px;
         left: 0px;
@@ -309,11 +321,11 @@ $green-color: #1ED400;
         cursor: pointer;
     }
 
-    img {
+    &__picture {
         max-width: -webkit-fill-available;
     }
 
-    p {
+    &__social {
         font-family: "Quicksand", sans-serif;
         font-size: 14px;
         font-weight: 500;
